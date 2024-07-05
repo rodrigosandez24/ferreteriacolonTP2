@@ -8,6 +8,10 @@
 body {
     background-color: #1d1a39;
     color:white;
+    background-image: url('../imagenes/fondo-herramientas.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
 }
 
 .contenedor-centrado {
@@ -26,20 +30,14 @@ body {
 
 .navbar-index{
     display: flex;
-    /* Activa Flexbox */
     flex-flow: row wrap;
     overflow: hidden;
     background-color: #5e4199;
     justify-content: space-between;
-    /* Distribuye el espacio uniformemente entre los elementos */
     align-items: center;
-    /* Alinea los elementos verticalmente en el centro */
     width: 100%;
-    /* Asegura que la barra de navegación ocupe todo el ancho */
     padding: 0 1em;
-    /* Añade un poco de relleno a los lados si es necesario */
     box-sizing: border-box;
-    /* Incluye el padding en el cálculo del ancho */
 
     /* margin: 0;
     padding: 0;
@@ -82,9 +80,7 @@ body {
 
 .logo-nav:hover {
     transform: scale(1.05);
-    /* Aumenta ligeramente el tamaño de la imagen */
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    /* Añade una sombra blanca */
 }
 
 
