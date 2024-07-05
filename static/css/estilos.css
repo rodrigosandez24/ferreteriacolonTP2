@@ -75,6 +75,16 @@ body {
     height: 80%;
     overflow: hidden;
     margin-left: 1em;
+    transition: transform 0.5s, box-shadow 0.5s;
+    border-radius: 5px;
+
+}
+
+.logo-nav:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño de la imagen */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    /* Añade una sombra blanca */
 }
 
 
