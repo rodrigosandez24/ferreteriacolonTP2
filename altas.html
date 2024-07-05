@@ -19,7 +19,7 @@
     <div class="logo-centrado">
         <img src="./static/imagenes/logo_C.jpg" alt="logo" width="800">
     </div>
-    <h1>Agregar Productos al Inventario</h1><br>
+    <h1>Agregar Articulos al Inventario</h1><br>
 
     <!--enctype="multipart/form-data" es necesario para enviar archivos al back.-->
     <form id="formulario" enctype="multipart/form-data">
@@ -37,7 +37,7 @@
         <input type="file" id="imagenProducto" name="imagen">
 
         <br><br>
-        <label for="proveedorProducto">Proveedor:</label>
+        <label for="proveedorProducto">Codigo de proveedor:</label>
         <input type="text" id="proveedorProducto" name="proveedor">
         
         <button type="submit">Agregar Producto</button>
@@ -72,18 +72,18 @@
                     } else {
                         // Si hubo un error, lanzar explícitamente una excepción
                         // para ser "catcheada" más adelante
-                        throw new Error('Error al agregar el producto.');
+                        throw new Error('Error al agregar el Articulo.');
                     }
             })
 
                 //Respuesta OK, muestra una alerta informando que el producto se agregó correctamente y limpia los campos del formulario para que puedan ser utilizados para un nuevo producto.
                 .then(function (data) {
-                    alert('Producto agregado correctamente.');
+                    alert('Articulo agregado correctamente.');
                 })
 
                 // En caso de error, mostramos una alerta con un mensaje de error.
                 .catch(function (error) {
-                    alert('Error al agregar el producto.');
+                    alert('Error al agregar el articulo.');
                 })
 
                 // Limpiar el formulario en ambos casos (éxito o error)

@@ -19,7 +19,7 @@
     <div class="logo-centrado">
         <img src="./static/imagenes/logo_C.jpg" alt="logo" width="800">
     </div>
-    <h1>Listado de Productos del Inventario</h1><br>
+    <h1>Listado de Articulos del Inventario</h1><br>
 
     <table> <!-- Se crea una tabla para mostrar los productos. -->
         <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
@@ -56,7 +56,7 @@
                     return response.json(); 
             } else {
                     // Si hubo un error, lanzar explícitamente una excepción para ser "catcheada" más adelante
-                    throw new Error('Error al obtener los productos.');
+                    throw new Error('Error al obtener los articulos.');
                 }
             })
 
@@ -86,7 +86,7 @@
             //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
             .catch(function (error) {
                 // Código para manejar errores
-                alert('Error al obtener los productos.');
+                alert('Error al obtener los articulos.');
             });
     </script>
 </body>

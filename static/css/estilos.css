@@ -25,7 +25,23 @@ body {
 }
 
 .navbar-index{
-    margin: 0;
+    display: flex;
+    /* Activa Flexbox */
+    flex-flow: row wrap;
+    overflow: hidden;
+    background-color: #5e4199;
+    justify-content: space-between;
+    /* Distribuye el espacio uniformemente entre los elementos */
+    align-items: center;
+    /* Alinea los elementos verticalmente en el centro */
+    width: 100%;
+    /* Asegura que la barra de navegación ocupe todo el ancho */
+    padding: 0 1em;
+    /* Añade un poco de relleno a los lados si es necesario */
+    box-sizing: border-box;
+    /* Incluye el padding en el cálculo del ancho */
+
+    /* margin: 0;
     padding: 0;
     
     top: 0;
@@ -39,7 +55,20 @@ body {
     overflow: hidden;
     margin-bottom: 20px;
     position: fixed !important; 
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); */
+}
+.navbar-index a{
+    padding: 1px;
+    margin:4px;
+    background-color: #5e4199;
+    color: #1d1a39;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1%;
+    font-weight: 800;
+
 }
 
 .logo-nav{
@@ -47,6 +76,7 @@ body {
     overflow: hidden;
     margin-left: 1em;
 }
+
 
 p {
     font-family: 'Times New Roman', Times, serif;

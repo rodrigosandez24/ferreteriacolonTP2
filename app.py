@@ -125,7 +125,7 @@ def mostrar_producto(codigo):
     if producto:
         return jsonify(producto)  #lista de diccionario de productos
     else:
-        return "Producto no encontrado", 404
+        return "Articulo no encontrado", 404
 
 @app.route("/productos", methods=["POST"])
 def agregar_producto():
@@ -145,9 +145,9 @@ def agregar_producto():
     nuevo_codigo = catalogo.agregar_producto(descripcion, cantidad, precio, nombre_imagen, proveedor)
     if nuevo_codigo:    
         imagen.save(os.path.join(ruta_destino, nombre_imagen))
-        return jsonify({"mensaje": "Producto agregado correctamente.", "codigo": nuevo_codigo, "imagen": nombre_imagen}), 201
+        return jsonify({"mensaje": "Articulo agregado correctamente.", "codigo": nuevo_codigo, "imagen": nombre_imagen}), 201
     else:
-        return jsonify({"mensaje": "Error al agregar el producto."}), 500
+        return jsonify({"mensaje": "Error al agregar el articulo."}), 500
 
 @app.route("/productos/<int:codigo>", methods=["PUT"])
 def modificar_producto(codigo):
@@ -185,9 +185,9 @@ def modificar_producto(codigo):
 
    # Se llama al método modificar_producto pasando el codigo del producto y los nuevos datos.
     if catalogo.modificar_producto(codigo, nueva_descripcion, nueva_cantidad, nuevo_precio, nombre_imagen, nuevo_proveedor):
-        return jsonify({"mensaje": "Producto modificado"}), 200
+        return jsonify({"mensaje": "Articulo modificado"}), 200
     else:
-        return jsonify({"mensaje": "Producto no encontrado"}), 403
+        return jsonify({"mensaje": "Articulo no encontrado"}), 403
 
 @app.route("/productos/<int:codigo>", methods=["DELETE"])
 def eliminar_producto(codigo):
@@ -201,11 +201,11 @@ def eliminar_producto(codigo):
 
         # Luego, elimina el producto del catálogo
         if catalogo.eliminar_producto(codigo):
-            return jsonify({"mensaje": "Producto eliminado"}), 200
+            return jsonify({"mensaje": "Articulo eliminado"}), 200
         else:
-            return jsonify({"mensaje": "Error al eliminar el producto"}), 500
+            return jsonify({"mensaje": "Error al eliminar el articulo"}), 500
     else:
-        return jsonify({"mensaje": "Producto no encontrado"}), 404
+        return jsonify({"mensaje": "Articulo no encontrado"}), 404
 
 
 if __name__ == "__main__":

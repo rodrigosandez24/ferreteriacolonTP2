@@ -19,7 +19,7 @@
     <div class="logo-centrado">
         <img src="./static/imagenes/logo_C.jpg" alt="logo" width="800">
     </div>
-    <h1>Eliminar Productos del Inventario</h1><br>
+    <h1>Eliminar Articulos del Inventario</h1><br>
 
     <table id="productos-table"> <!-- Se crea una tabla para mostrar los productos. -->
         <thead> <!--Encabezado de la tabla con columnas para código, descripción, cantidad, precio y acciones.-->
@@ -69,20 +69,20 @@
                 // Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
                 .catch(error => {
                     console.log('Error:', error);
-                    alert('Error al obtener los productos.');
+                    alert('Error al obtener los articulos.');
                 });
         }
 
         // Se utiliza para eliminar un producto.
         function eliminarProducto(codigo) {
             // Se muestra un diálogo de confirmación. Si el usuario confirma, se realiza una solicitud DELETE al servidor a través de fetch(URL + 'productos/${codigo}', {method: 'DELETE' }).
-            if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+            if (confirm('¿Estás seguro de que quieres eliminar este articulo?')) {
                 fetch(URL + `productos/${codigo}`, { method: 'DELETE' })
                     .then(response => {
                         if (response.ok) {
                             // Si es exitosa (response.ok), elimina el producto y da mensaje de ok.
                             obtenerProductos(); // Vuelve a obtener la lista de productos para actualizar la tabla.
-                            alert('Producto eliminado correctamente.');
+                            alert('Articulo eliminado correctamente.');
                         }
                     })
                     // En caso de error, mostramos una alerta con un mensaje de error.

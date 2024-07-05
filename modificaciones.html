@@ -27,7 +27,7 @@
         <form id="form-obtener-producto">
             <label for="codigo">Código:</label>
             <input type="text" id="codigo" required><br>
-            <button type="submit">Modificar Producto</button> <a href="index.html">Menu principal</a>
+            <button type="submit">Modificar Articulo</button> <a href="index.html">Menu principal</a>
         </form>
 
         <!-- Segundo formulario: se muestra solo si mostrarDatosProducto es verdadero. Llama a la función guardarCambios -->
@@ -93,7 +93,7 @@
                     if (response.ok) {
                         return response.json()
                     } else {
-                        throw new Error('Error al obtener los datos del producto.')
+                        throw new Error('Error al obtener los datos del articulo.')
                     }
                 })
                 .then(data => {
@@ -170,16 +170,16 @@
                     if (response.ok) {
                         return response.json()
                     } else {
-                        throw new Error('Error al guardar los cambios del producto.')
+                        throw new Error('Error al guardar los cambios del articulo.')
                     }
                 })
                 .then(data => {
-                    alert('Producto actualizado correctamente.');
+                    alert('Articulo actualizado correctamente.');
                     limpiarFormulario();
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('Error al actualizar el producto.');
+                    alert('Error al actualizar el articulo.');
                 });
         }
 
